@@ -1,0 +1,90 @@
+﻿@model photographers.Models.Photographer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Photographer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.portfolio.aboutme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.portfolio.aboutme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.website)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.website)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.instagram)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instagram)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.profileImgURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.profileImgURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.experienceThan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.experienceThan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDphotographer }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

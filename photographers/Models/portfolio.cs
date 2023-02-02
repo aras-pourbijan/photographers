@@ -42,5 +42,6 @@ namespace photographers.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photographer> Photographers { get; set; }
+
     }
 }

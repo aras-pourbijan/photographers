@@ -6,37 +6,95 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+<body class="p-0 m-0">
+    @*</button>
+        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+    <div class="row container-fluid m-0 p-0" style="height: 100vh">
+
+        <div class="col-md-1 d-flex flex-md-column flex-shrink-0 p-3 text-white " style="width: 150px; background-color: #14213D ">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">SPQR Frame</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto text-uppercase align-items-center">
+                <li class="nav-item">
+                    <a href="index" class="nav-link @*active*@" aria-current="page">
+                        <i class="bi bi-house" style="font-size:30px" data-bs-toggle="tooltip"
+                           data-bs-placement="top"
+                           title="Home"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-camera" style="font-size:30px" data-bs-toggle="tooltip"
+                           data-bs-placement="top"
+                           title="Photographers"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-geo-alt" style="font-size:30px" data-bs-toggle="tooltip"
+                           data-bs-placement="top"
+                           title="Avalable Spots"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-calendar-plus" style="font-size:30px" data-bs-toggle="tooltip"
+                           data-bs-placement="top"
+                           title="Book Your Photoshoot"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-info-circle" style="font-size:30px" data-bs-toggle="tooltip"
+                           data-bs-placement="top"
+                           title="About us"></i>
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>mdo</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1" style="">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+
+
+
+
+        <div class="col body-content m-0 p-0">
+            @RenderBody()
+
+        </div>
+        <footer class="fixed-bottom d-flex justify-content-end text-light">
+            <hr />
+            <p>   &copy; @DateTime.Now.Year - My ASP.NET Application | Created by: <a class="text-decoration-none text-light" href="http://araspourbijan.com/">Aras Pourbijan</a> MVC EF framework 4.7.2 </p>
+
         </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

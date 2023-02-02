@@ -1,6 +1,9 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    
+    background-color: #E5E5E5;
+}
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -28,3 +31,24 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+
+.bi {
+    color: #FCA311;
+    font-size: 45px;
+}
+
+.wallpaper {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/homepage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+    background-color: black;
+}
+.btn-warning {
+    background-color: #FCA311;
+    width:200PX
+}
+    
