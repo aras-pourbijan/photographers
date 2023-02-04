@@ -14,7 +14,7 @@ namespace photographers.Models
 
         [Required]
         [StringLength(70)]
-        [Display(Name ="User Name")]
+        [Display(Name ="User Name")]        
         public string UserName { get; set; }
 
         [Required]
@@ -24,6 +24,7 @@ namespace photographers.Models
 
         [StringLength(50)]
         [DefaultValue("photographer")]
+
         public string Roles { get; set; }
     }
 }

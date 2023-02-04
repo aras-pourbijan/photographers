@@ -19,8 +19,14 @@ namespace photographers.Models
 
         [Column("location")]
         [Required]
-        [StringLength(50)]
+        [StringLength(100)]
+        [Display (Name = "Location")]
         public string location1 { get; set; }
+
+        public string locationURL { get; set; }
+        [Display (Name = "Describtion")]
+        public string Describtion { get; set; }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<reservation> reservations { get; set; }

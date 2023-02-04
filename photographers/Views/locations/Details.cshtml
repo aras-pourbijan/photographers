@@ -1,0 +1,42 @@
+﻿@model photographers.Models.location
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.location1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Describtion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Describtion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDlocation }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

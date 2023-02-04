@@ -127,8 +127,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PhotographersController.cs" />
-    <Compile Include="Controllers\portfoliosController.cs" />
+    <Compile Include="Controllers\locationsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,19 +200,22 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Photographers\Create.cshtml" />
-    <Content Include="Views\Photographers\Delete.cshtml" />
-    <Content Include="Views\Photographers\Details.cshtml" />
-    <Content Include="Views\Photographers\Edit.cshtml" />
-    <Content Include="Views\Photographers\Index.cshtml" />
-    <Content Include="Views\portfolios\Create.cshtml" />
-    <Content Include="Views\portfolios\Delete.cshtml" />
-    <Content Include="Views\portfolios\Details.cshtml" />
-    <Content Include="Views\portfolios\Edit.cshtml" />
-    <Content Include="Views\portfolios\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\login.cshtml" />
+    <Content Include="Views\Users\Administration.cshtml" />
+    <Content Include="Views\locations\Create.cshtml" />
+    <Content Include="Views\locations\Delete.cshtml" />
+    <Content Include="Views\locations\Details.cshtml" />
+    <Content Include="Views\locations\Edit.cshtml" />
+    <Content Include="Views\locations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\IMG\locations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
