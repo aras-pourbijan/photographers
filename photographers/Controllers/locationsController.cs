@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using photographers.Models;
+using WebGrease.Css.Extensions;
 
 namespace photographers.Controllers
 {
@@ -51,10 +52,12 @@ namespace photographers.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 string filename = locationIMG.FileName;
                 string path = Server.MapPath("/content/IMG/locations/" + filename);
                 locationIMG.SaveAs(path);
                 location.locationURL = filename;
+               
                 db.locations.Add(location);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -83,14 +86,28 @@ namespace photographers.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDlocation,location1,locationURL,Describtion")] location location)
+        public ActionResult Edit([Bind(Include = "IDlocation,location1,locationURL,Describtion")] location location, HttpPostedFileBase locationIMG)
         {
             if (ModelState.IsValid)
             {
+              
+                if (locationIMG != null)
+                {
+                    string filename = locationIMG.FileName;
+                    string path = Server.MapPath("/content/IMG/locations/" + filename);
+                    locationIMG.SaveAs(path);
+                    location.locationURL = filename;
+                }
+                //?????????????????????????????????????????????????????????????????
+                //else
+                //{
+
+                  
+                //}
                 db.Entry(location).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
+            } 
             return View(location);
         }
 

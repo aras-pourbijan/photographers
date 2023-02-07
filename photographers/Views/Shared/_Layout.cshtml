@@ -31,15 +31,12 @@
                            title="Home"></i>
                     </a>
                 </li>
-                <li>@Html.ActionLink("Home", "Index", "Home",null, new { @class = "bi bi-house text-decoration-none" })</li>
+                <li>
+                    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "bi bi-house text-decoration-none" })
+                </li>
 
 
 
-
-
-
-
-                
 
                 <li>
                     <a href="#" class="nav-link text-white">
@@ -69,6 +66,15 @@
                            title="About us"></i>
                     </a>
                 </li>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        @Html.ActionLink("management", "Administration", "users", null, new { @class = "text-decoration-none" })
+                    </li>
+
+
+                }
             </ul>
             <hr>
             <div class="d-flex justify-content-center align-content-center ">
@@ -81,7 +87,7 @@
                         <div>
                             <i class="d-flex bi bi-box-arrow-left text-decoration-none text-warning">@Html.ActionLink("(Logout)", "logout", "users", null, new { @class = "text-decoration-none text-warning" })</i>
                         </div>
-                    </div>              
+                    </div>
 
                 }
                 else

@@ -6,11 +6,11 @@
 
 <h2>Edit</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "locations", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
+    <div class="ms-5 form-row form-group">
         <h4>location</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -27,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.locationURL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.locationURL, new { htmlAttributes = new { @class = "form-control", type="file" } })
+                @Html.TextBox("locationIMG", "", htmlAttributes: new { @class = "form-control", @type = "file" })
                 @Html.ValidationMessageFor(model => model.locationURL, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Describtion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Describtion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.Describtion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Describtion, "", new { @class = "text-danger" })
             </div>
         </div>

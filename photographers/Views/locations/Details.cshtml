@@ -4,37 +4,33 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+
+<h2><span class="text-secondary">@Html.ActionLink("<", "Index","locations",null, new {@class= "link-secondary text-decoration-none" }) | </span> Locations</h2>
 
 <div>
-    <h4>location</h4>
+
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.location1)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.location1)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.locationURL)
-        </dt>
+    <div class="row w-75 m-auto pt-5">
+        <div class="col-12 col-md-6 px-3 mb-3 ">
+            <div class="d-flex flex-column align-items-start ps-5">
+                <h1 class="card-title my-5">@Html.DisplayFor(model => model.location1)</h1>
+                <p class="card-text text-start">@Html.DisplayFor(model => model.Describtion)</p>
+                @*<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>*@
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.locationURL)
-        </dd>
+        <div class="col-12 col-md-6 d-flex ">
+            <img src="~/Content/img/locations/@Model.locationURL" style="width:auto;height:60vh; object-fit:cover; object-position:center" class="img-thumbnail ms-auto me-auto" alt="location">
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Describtion)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Describtion)
-        </dd>
 
-    </dl>
+</div>
+
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.IDlocation }) |

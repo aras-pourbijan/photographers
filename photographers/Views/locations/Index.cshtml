@@ -9,14 +9,14 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped table-hover table-responsive .w-auto ">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.location1)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.locationURL)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Describtion)
         </th>
@@ -25,13 +25,17 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.location1)
+        <td >
+            <div class=" card d-flex flex-column align-items-center pb-3">
+                <h3>
+                    @Html.DisplayFor(modelItem => item.location1)
+                </h3>
+
+                <img src="~/Content/img/locations/@item.locationURL" alt="location" style="width:150px;height:100px; object-fit:cover" class="img-thumbnail img-fluid" />
+            </div>
         </td>
-        <td>
-            @*@Html.DisplayFor(modelItem => item.locationURL)*@
-            <img src="~/Content/img/locations/@item.locationURL" alt="pizza foto" style="width:50px" />
-        </td>
+        @*<td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Describtion)
         </td>
@@ -44,3 +48,4 @@
 }
 
 </table>
+

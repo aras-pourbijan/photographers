@@ -23,6 +23,7 @@ namespace photographers.Models
         [Display (Name = "Location")]
         public string location1 { get; set; }
 
+        [Display (Name = "Image")]
         public string locationURL { get; set; }
         [Display (Name = "Describtion")]
         public string Describtion { get; set; }

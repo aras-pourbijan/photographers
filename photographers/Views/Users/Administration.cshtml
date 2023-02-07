@@ -3,11 +3,14 @@
     ViewBag.Title = "Administration";
 }
 
-<h2>Administration</h2>
+<div class="mt-5 d-flex flex-column align-items-center">
+    <h2>Administration</h2>
+    <hr />
+    <div class="d-flex justify-content-evenly btn-group">
+        <h3>@Html.ActionLink("Locations", "Index", "locations", null, new { @class = "link-dark text-decoration-none" }) </h3>
+        <h3>@Html.ActionLink("Slots", "Index", "slots", null, new { @class = "link-dark text-decoration-none" }) </h3>
+        <h3>gallaris</h3>
+        <h3>bookings</h3>
+    </div>
+</div>
 
-
-
-<h3>user</h3>
-<h3>photographers</h3>
-<h3>gallaris</h3>
-<h3>bookings</h3>

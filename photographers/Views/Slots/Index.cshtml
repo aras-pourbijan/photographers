@@ -1,0 +1,28 @@
+﻿@model IEnumerable<photographers.Models.Slot>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="m-3">Slots managment</h2>
+
+
+<div class="mt-5 row w-75 mx-auto">
+    <input type="button" value="Add New Slot" onclick="location.href='@Url.Action("Create", "slots")'" class=" col-12 col-md-3  m-2 justify-content-center align-items-center btn  btn-success "/>
+
+    @foreach (var item in Model)
+    {
+        <div class="card card-group col-12 col-md-3 m-2 pt-3 d-flex flex-column align-items-center ">
+            <h5 class="card-title">@Html.DisplayFor(modelItem => item.timeslot)</h5>
+            <div class="card-subtitle text-secondary">@Html.DisplayNameFor(model => model.timeslot)</div>
+
+            <div class="card-img-bottom">
+                @Html.ActionLink("✏", "Edit", new { id = item.IDslot }) |
+                @Html.ActionLink("🗑", "Delete", new { id = item.IDslot })
+
+            </div>
+        </div>
+    }
+
+    </div>
+
